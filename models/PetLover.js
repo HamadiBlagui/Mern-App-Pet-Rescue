@@ -22,10 +22,6 @@ const loverSchema = new Schema({
         type:String,
         required:true,
     },
-    birthDate: {
-        type: Date,
-        default: Date.now(),
-    },
     adress:{
      type :String,
      required:true,

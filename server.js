@@ -5,7 +5,7 @@ const mongoose=require ("mongoose")
 const PetLover= require('./models/PetLover')
 const Organization=require('./models/Organization')
 const Company=require('./models/Company')
-const AddAdopt=require('./models/AddAdopt')
+const Post=require('./models/Post')
 const Donation=require('./models/Donation')
 const authRoute =require ("./routes/Auth.js")
 
@@ -16,11 +16,12 @@ app.use(express.json());
 
 //*const URI=process.env.URI;
 const PORT = 5000 || process.env.PORT
+const URI =process.env.URI
 
 //2-liaison de la BD:
 
 //question database is coneted
-mongoose.connect('mongodb://127.0.0.1:27017/PETRESCUE' ,{
+mongoose.connect(URI,{
     useNewUrlParser:true,
     useUnifiedTopology:true,   
 })
